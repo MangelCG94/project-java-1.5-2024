@@ -31,9 +31,6 @@ public class CustomerRepository {
 
     public void removeCustomer(Long id) {
         System.out.println("Borrando cliente...");
-        if (findCustomerById(id) == null) {
-            System.out.println("No existe un cliente con id = " + id);
-        }
         customers.remove(id);
         System.out.println("Cliente borrado correctamente");
     }

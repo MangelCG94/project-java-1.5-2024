@@ -139,7 +139,10 @@ public class Main {
             long id = scanner.nextLong();
             if (id == -1)
                 return;
-            repository.removeCustomer(id);
+            if (repository.findCustomerById(id) == null)
+                System.out.println("No existe un cliente con id = " + id);
+            else
+                repository.removeCustomer(id);
         } catch (InputMismatchException e) {
             System.out.println("Error por meter un valor no valido");
         }
