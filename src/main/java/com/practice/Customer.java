@@ -51,6 +51,6 @@ public class Customer {
 
     @Override
     public String toString() {
-        return nombre + "\t" + apellido + "\t" + email;
+        return id + "\t" + nombre + "\t" + apellido + "\t" + email;
     }
 }
